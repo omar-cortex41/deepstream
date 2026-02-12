@@ -1,0 +1,23 @@
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+model-engine-file=/home/omar/work/tenssort_inference/deepstream/models/yolo26m_fp16_dynamic.engine
+labelfile-path=labels.txt
+batch-size=8
+# Note: batch-size here should match num_sources in config.yaml
+network-mode=2
+num-detected-classes=80
+interval=0
+gie-unique-id=1
+process-mode=1
+network-type=0
+cluster-mode=4
+maintain-aspect-ratio=1
+symmetric-padding=1
+model-color-format=0
+parse-bbox-func-name=NvDsInferParseCustomYolo
+custom-lib-path=../custom_parser/libnvdsinfer_custom_impl_yolo.so
+output-blob-names=output0
+
+[class-attrs-all]
+pre-cluster-threshold=0.25
